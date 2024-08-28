@@ -21,4 +21,4 @@ jobs:
       with:
         server: ftp.easternheartlandresidenceinnltd.com  # FTP server (e.g., ftp.example.com)
         username:  cpaneltest@testapp.easternheartlandresidenceinnltd.com  # FTP username
-        password: cpanel12@@  # FTP password
+        password: cpanel_12@@@  # FTP password
