@@ -16,9 +16,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build project (if necessary)
-      run: npm run build
-
     - name: Upload to cPanel
       uses: SamKirkland/FTP-Deploy-Action@4.3.1
       with:
