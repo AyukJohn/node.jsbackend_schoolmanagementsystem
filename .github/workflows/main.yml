@@ -1,0 +1,27 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main  # Deploy on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project (if necessary)
+      run: npm run build
+
+    - name: Upload to cPanel
+      uses: SamKirkland/FTP-Deploy-Action@4.3.1
+      with:
+        server: ftp.easternheartlandresidenceinnltd.com  # FTP server (e.g., ftp.example.com)
+        username:  cpaneltest@testapp.easternheartlandresidenceinnltd.com  # FTP username
+        password: cpanel12@@  # FTP password
